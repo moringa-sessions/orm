@@ -18,3 +18,29 @@ Common python ORMS
 
 Migration
 - alembic
+
+
+Commands used
+##### alembic init alembic
+ - Creates the Alembic directory and config files.
+After alembic init edit env.py in alembic folder;
+  - remove  '''target_metadata = None''' and add
+  '''
+  from app.models import Base
+  target_metadata = Base.metadata
+  '''
+  depending on thr folder that has your models
+
+Now fo to  alembic.ini file in the roort directory and change the database url to be for sqlite i.e sqlalchemy.url = sqlite:///./database.db
+
+
+##### alembic revision --autogenerate -m "Add users table"
+ - Detects model changes and creates a new migration script.
+##### alembic upgrade head 
+ - Applies the latest migration to the database.
+##### alembic downgrade -1  
+ -  Reverts the last migration.
+
+##### alembic history 
+ - Shows a list of all migration versions.
+
