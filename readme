@@ -1,0 +1,20 @@
+## ORM - 
+
+
+Benefits
+- Cross database support
+- Secure
+- Easy to maintain
+
+
+Common python ORMS
+- Django ORM
+- SQLAlchemy
+- Flask-SQLAlchemy
+
+<!-- -->
+- Setup your virtual environment
+- pipenv
+
+Migration
+- alembic
